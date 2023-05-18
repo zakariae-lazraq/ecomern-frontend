@@ -30,19 +30,31 @@ function Navigation() {
     }
 
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar  expand="lg"  className="Navbar">
             <Container>
                 <LinkContainer to="/">
-                    <Navbar.Brand>Ecomern</Navbar.Brand>
+                    <Navbar.Brand>DevoSystem <img src="https://devosystem.com/de.png" style={{width:'50px' }} /> </Navbar.Brand>
+        
                 </LinkContainer>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         {/* if no user */}
                         {!user && (
+                            <>
                             <LinkContainer to="/login">
-                                <Nav.Link>Login</Nav.Link>
+                                
+                            <Nav.Link>Login</Nav.Link>
                             </LinkContainer>
+                            <LinkContainer to="/contact">
+                            <Nav.Link>Contact Us</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/solution">
+                                <Nav.Link>Solutions</Nav.Link>
+                            </LinkContainer>
+                            </>
+                           
+                          
                         )}
                         {user && !user.isAdmin && (
                             <LinkContainer to="/cart">
@@ -54,8 +66,13 @@ function Navigation() {
                                         </span>
                                     )}
                                 </Nav.Link>
+                                
                             </LinkContainer>
+                            
+
+                            
                         )}
+                        
 
                         {/* if user */}
                         {user && (
@@ -81,6 +98,15 @@ function Navigation() {
                                             </LinkContainer>
                                             <LinkContainer to="/orders">
                                                 <NavDropdown.Item>My orders</NavDropdown.Item>
+                                            </LinkContainer>
+                                            <LinkContainer to="/service">
+                                                <NavDropdown.Item>Service</NavDropdown.Item>
+                                            </LinkContainer>
+                                            <LinkContainer to="/contact">
+                                            <NavDropdown.Item>Contact Us</NavDropdown.Item>
+                                             </LinkContainer>
+                                             <LinkContainer to="/solution">
+                                            <NavDropdown.Item>Solutions</NavDropdown.Item>
                                             </LinkContainer>
                                         </>
                                     )}

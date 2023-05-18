@@ -36,3 +36,152 @@
     transform: rotate(360deg);
   }
 }
+
+.Form {
+  background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #555;
+  border-radius: 15px;
+  transition: transform 0.5s ease;
+  width: 80%; /* Adjust the width based on your preference */
+  height: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.Form img {
+  width: 300px; /* Adjust the width of the logo image based on your preference */
+  height: auto; /* Maintain the aspect ratio of the logo image */
+}
+
+.Form:hover {
+  transform: translateY(20px);
+}
+
+@media (max-width: 768px) {
+  .Form {
+    width: 80%; /* Adjust the width for smaller screens */
+  }
+}
+.title{
+  margin: 40px;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.footerTitle{
+  
+  font-size: 18px;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-family:Arial, Helvetica, sans-serif
+}
+.footerLink {
+  font-family: 'Times New Roman', Times, serif;
+  color: white;
+  text-decoration: none;
+ 
+}
+.FooterText{
+  font-family: 'Times New Roman', Times, serif;
+}
+.solutionText{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
+
+
+}
+.SolFooterCart{
+  font-family:Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+
+
+.footerTitle:hover{
+  background-image: linear-gradient(45deg, #4400ff, #2bb0ee);
+}
+.InfoForm{  
+  margin-left: 75%;  
+}
+
+.contact_title{
+  margin: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+
+}
+
+.textForm{
+  text-align: center;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 50px;
+  font-weight: 60px;
+
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+  
+}
+
+
+.nine h1 {
+  text-align:center; font-size:50px; text-transform:uppercase; color:linear-gradient(45deg, #553c9a, #ee4b2b); letter-spacing:1px;
+  font-family:"Playfair Display", serif; font-weight:400;
+}
+.nine h1 span {
+  margin-top: 5px;
+    font-size:15px; color:#444; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+    text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+
+    display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-template-rows: 27px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.nine h1 span:after,.nine h1 span:before {
+    content: " ";
+    display: block;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 5px;
+  background-color:#f8f8f8;
+}
+h1 {
+  position: relative;
+  margin: 40px;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+

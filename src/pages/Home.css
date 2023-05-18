@@ -31,3 +31,19 @@ img.card-img-top.product-preview-img {
     display: block;
     margin: 0 auto;
 }
+.BtnMore{
+    background-image: linear-gradient(45deg, #553c9a, #ee4b2b);
+    border: none;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
+}
+.BtnMore:hover{
+    background-image: linear-gradient(45deg, #553c9a, #2bcaee);
+}

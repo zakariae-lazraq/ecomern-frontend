@@ -1,4 +1,5 @@
 import "./App.css";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
@@ -17,8 +18,33 @@ import EditProductPage from "./pages/EditProductPage";
 import { useEffect } from "react";
 import { io } from "socket.io-client";
 import { addNotification } from "./features/userSlice";
+import FooterPage from "./components/FooterPage";
+
+
+import Service from "./pages/Service";
+import FormService from "./pages/FormService";
+import Contact from "./pages/Contact";
+import NosSolution from "./pages/NosSolution";
+
+
+
+
 
 function App() {
+    useEffect(() => {
+        (function(d, m){
+          var kommunicateSettings = {"appId":"31858aeafb16ec12120cf58e59aae5abd","popupWidget":true,"automaticChatOpenOnNavigation":true};
+          var s = document.createElement("script");
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+          var h = document.getElementsByTagName("head")[0];
+          h.appendChild(s);
+          window.kommunicate = m;
+          m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+        /* NOTE : Use a web server to view HTML files as real-time updates will not work if you directly open the HTML file in the browser. */
+      }, []);
     const user = useSelector((state) => state.user);
     const dispatch = useDispatch();
     useEffect(() => {
@@ -47,6 +73,12 @@ function App() {
                         <>
                             <Route path="/login" element={<Login />} />
                             <Route path="/signup" element={<Signup />} />
+                            <Route path="/contact" element={<Contact/>} />
+                            <Route path="/solution" element={<NosSolution/>}/>
+                            
+                           
+                           
+                           
                         </>
                     )}
 
@@ -54,6 +86,13 @@ function App() {
                         <>
                             <Route path="/cart" element={<CartPage />} />
                             <Route path="/orders" element={<OrdersPage />} />
+                            <Route path="/service" element={<FormService/>}/>
+                            <Route path="/contact" element={<Contact/>} />
+                            <Route path="/solution" element={<NosSolution/>}/>
+                            
+                            
+                            
+                           
                         </>
                     )}
                     {user && user.isAdmin && (
@@ -68,8 +107,17 @@ function App() {
                     <Route path="/new-product" element={<NewProduct />} />
 
                     <Route path="*" element={<Home />} />
+                    
                 </Routes>
             </BrowserRouter>
+
+        
+            
+        
+            
+           
+            
+          
         </div>
     );
 }

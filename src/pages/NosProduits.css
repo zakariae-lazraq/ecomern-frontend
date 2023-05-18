@@ -1,0 +1,25 @@
+.cardDeckStyle {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center; /* Center the cards horizontally */
+  margin-top: 40px;
+}
+
+.card {
+  flex-basis: 20%; /* Each card occupies 20% of the container width */
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.card-img-top {
+  width: 90%;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.card-img-top:hover {
+  transform: scale(1.1);
+}

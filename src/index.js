@@ -8,6 +8,8 @@ import store from "./store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import persistStore from "redux-persist/es/persistStore";
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
+
 
 // store to persit
 const persistedStore = persistStore(store);
